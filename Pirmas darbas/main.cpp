@@ -84,7 +84,7 @@ int main() {
 
     int q, w, e, r, t;
 
-        cout << "Iveskite Jusu skaicius:" << endl;
+    cout << "Iveskite Jusu skaicius:" << endl;
         cin >> q;
         cin >> w;
         cin >> e;
@@ -96,9 +96,16 @@ int main() {
     cout<<"--------------6UZD--------------"<<endl;
     cout<<"\n"<<endl;
 
-    int d;
+    int skaicius;
+        cout<<"Iveskite dvizenkli skaiciu: "<<endl;
+        cin>>skaicius;
 
+    int pskaicius = skaicius / 10;
+    int askaicius = skaicius % 10;
 
+    int suma = pskaicius + askaicius;
+
+        cout<<"Jusu skaiciaus skaitmenu suma: "<<suma<<endl;
 
     return 0;
 }
