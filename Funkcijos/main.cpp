@@ -34,7 +34,9 @@ void f() {
 
 int getrandomnumber();
 
-    srand(time(nullptr));
+    srand(time(nullptr)); int = salkd
     for (int a = 0; a < 10; a++)
         cout<<"Skaiciai: " <<getrandomnumber()<<endl;
+
+    dsdfdsfhel
 }
