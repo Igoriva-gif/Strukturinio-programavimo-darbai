@@ -1,3 +1,3 @@
-C:/Users/s057739/Documents/Strukturinio-programavimo-darbai/PirmojiPraktineUzduotis/cmake-build-debug/CMakeFiles/PirmojiPraktineUzduotis.dir
-C:/Users/s057739/Documents/Strukturinio-programavimo-darbai/PirmojiPraktineUzduotis/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/s057739/Documents/Strukturinio-programavimo-darbai/PirmojiPraktineUzduotis/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+C:/Users/PC/Documents/Programavimas/Strukturinio-programavimo-darbai/PirmojiPraktineUzduotis/cmake-build-debug/CMakeFiles/PirmojiPraktineUzduotis.dir
+C:/Users/PC/Documents/Programavimas/Strukturinio-programavimo-darbai/PirmojiPraktineUzduotis/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/PC/Documents/Programavimas/Strukturinio-programavimo-darbai/PirmojiPraktineUzduotis/cmake-build-debug/CMakeFiles/rebuild_cache.dir

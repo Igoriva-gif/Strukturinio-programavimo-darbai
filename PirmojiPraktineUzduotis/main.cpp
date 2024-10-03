@@ -85,11 +85,19 @@ using namespace std;
             cout<<"Apkeisdami si GBP kieki su EUR, Jus gausite: "<< fixed << setprecision(2) << EurKiekis << " EUR";
         }
         else if (vpasirinkimas == 2) {
+<<<<<<< HEAD
             EurKiekis = ValiutosKiekis / USD_Parduoti;
             cout<<"Apkeisdami si USD kieki su EUR, Jus gausite: "<< fixed << setprecision(2) << EurKiekis << " EUR";
         }
         else if (vpasirinkimas == 3) {
             EurKiekis = ValiutosKiekis / INR_Parduoti;
+=======
+            EurKiekis = ValiutosKiekis * USD_Parduoti;
+            cout<<"Apkeisdami si USD kieki su EUR, Jus gausite: "<< fixed << setprecision(2) << EurKiekis << " EUR";
+        }
+        else if (vpasirinkimas == 3) {
+            EurKiekis = ValiutosKiekis * INR_Parduoti;
+>>>>>>> aba83e6ab3e1cb5d5242e951daeac7950ebfedae
             cout<<"Apkeisdami si INR kieki su EUR, Jus gausite: "<< fixed << setprecision(2) << EurKiekis << " EUR";
         }
         else {
@@ -101,7 +109,11 @@ using namespace std;
         int pasirinkimas;
         char ciklas = 'y';
 
+<<<<<<< HEAD
         while (ciklas == 'y' || ciklas == 'Y' ) {
+=======
+        while (ciklas == 'y') {
+>>>>>>> aba83e6ab3e1cb5d5242e951daeac7950ebfedae
             cout<<"Pasirinkite, ka norite padaryti su Jusu valiuta:"<<endl;
             cout<<"1. Palyginti valiutu kursus"<<endl;
             cout<<"2. Nupirkti valiuta"<<endl;

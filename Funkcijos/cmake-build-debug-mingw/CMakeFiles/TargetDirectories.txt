@@ -1,0 +1,3 @@
+C:/Users/PC/Documents/Programavimas/Strukturinio-programavimo-darbai/Funkcijos/cmake-build-debug-mingw/CMakeFiles/Funkcijos.dir
+C:/Users/PC/Documents/Programavimas/Strukturinio-programavimo-darbai/Funkcijos/cmake-build-debug-mingw/CMakeFiles/edit_cache.dir
+C:/Users/PC/Documents/Programavimas/Strukturinio-programavimo-darbai/Funkcijos/cmake-build-debug-mingw/CMakeFiles/rebuild_cache.dir
