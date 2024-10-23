@@ -1,4 +1,6 @@
 #include <iostream>
+#include <cstdlib>
+#include <ctime>
 using namespace std;
 
 
@@ -39,6 +41,65 @@ void Daliklis() {
         }
     }
 }
+int randskkurimas() {
+    srand(static_cast<unsigned int>(time(NULL)));
+    return rand() % 100 + 1;
+}
+void Zaidimas() {
+    int randskaicius = randskkurimas();
+    int pasirinkimas;
+
+    cout<<"Jus pasirinkote pazaisti mini atspejimo zaidima\n"<<endl;
+
+    while (true) {
+        cout<<"Iveskite savo skaiciaus spejima nuo 1 iki 100\n"<<endl;
+        cin>>pasirinkimas;
+
+        if (pasirinkimas > randskaicius + 10 ) {
+            cout<<"Jusu skaicius yra daug didesnis uz sugeneruota atsitiktini skaiciu. Bandykite ivesti mazesni skaiciu"<<endl;
+        }
+        else if (pasirinkimas < randskaicius - 10) {
+            cout<<"Jusu skaicius yra daug mazesnis uz sugeneruota atsitiktini skaiciu. Bandykite ivesti didesni skaiciu"<<endl;
+        }
+        else if (pasirinkimas > randskaicius + 3) {
+            cout<<"Jusu skaicius yra truputi didesnis uz sugeneruota atsitiktini skaiciu. Bandykite ivesti mazesni skaiciu"<<endl;
+        }
+        else if (pasirinkimas < randskaicius - 3) {
+            cout<<"Jusu skaicius yra truputi mazesnis uz sugeneruota atsitiktini skaicius. Bandykite ivesti didesni skaiciu"<<endl;
+        }
+        else if (pasirinkimas >= randskaicius - 2 && pasirinkimas != randskaicius) {
+            cout<<"Jus beveik atspejote sugeneruota atsitiktini skaiciu! Bandykite ivesti siek tiek mazesni skaiciu!"<<endl;
+        }
+        else if (pasirinkimas <= randskaicius - 2 && pasirinkimas != randskaicius) {
+            cout<<"Jus beveik atspejote sugeneruota atsitiktini skaiciu! Bandykite ivesti siek tiek didesni skaiciu"<<endl;
+        }
+        else {
+            cout<<"Sveikiname! Jus atspejote sugeneruota atsitiktini skaiciu: "<<randskaicius<<endl;
+            break;
+        }
+    }
+}
+void void_fizzbuzz() {
+    int n;
+    cout<<"Iveskite teigiama sveikaji skaiciu: "<<endl;
+    cin>>n;
+
+    for (int i = 1; i <= n; i++ ) {
+        if (i % 3 == 0 || i % 5 == 0 ) {
+            cout<<i<<" FizzBuzz"<<endl;
+        }
+        else if ( i % 3 == 0 ) {
+            cout<<i<<" Fizz"<<endl;
+        }
+        else if ( i % 5 == 0 ) {
+            cout<<i<<" Buzz"<<endl;
+        }
+        else if ( i % 5 != 0 || i % 3 != 0 ) {
+            cout<<i<<" skaicius nesidalina is 3 ir 5" << endl;
+        }
+    }
+}
+
 int main(){
     int pasirinkimas;
     char ciklas ='T';
@@ -59,7 +120,12 @@ int main(){
         else if (pasirinkimas == 2) {
             Daliklis();
         }
-
+        else if (pasirinkimas == 3) {
+            Zaidimas();
+        }
+        else if (pasirinkimas == 4) {
+            void_fizzbuzz();
+        }
         else {
             cout<<"Toks pasirinkimas neegzistuoja"<<endl;
         }
@@ -69,11 +135,3 @@ int main(){
     return 0;
 
 }
-
-//* dbd
-DBD (48; 18)
-    r0    r1
-48 = 2 * 18 ( liekana 12)
-        r0          r1
-18 = 1 * 12 ( liekana 6)
-12 = 2 * 6 - dbd
