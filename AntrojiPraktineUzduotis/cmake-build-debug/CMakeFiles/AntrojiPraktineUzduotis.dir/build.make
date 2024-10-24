@@ -43,19 +43,19 @@ cmake_force:
 SHELL = cmd.exe
 
 # The CMake executable.
-CMAKE_COMMAND = "C:\Program Files\JetBrains\CLion 2024.2.2\bin\cmake\win\x64\bin\cmake.exe"
+CMAKE_COMMAND = "C:\Program Files\JetBrains\CLion 2024.2.0.1\bin\cmake\win\x64\bin\cmake.exe"
 
 # The command to remove a file.
-RM = "C:\Program Files\JetBrains\CLion 2024.2.2\bin\cmake\win\x64\bin\cmake.exe" -E rm -f
+RM = "C:\Program Files\JetBrains\CLion 2024.2.0.1\bin\cmake\win\x64\bin\cmake.exe" -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\PC\Desktop\new\Strukturinio-programavimo-darbai\AntrojiPraktineUzduotis
+CMAKE_SOURCE_DIR = C:\Users\s057739\Documents\Strukturinio-programavimo-darbai\AntrojiPraktineUzduotis
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\PC\Desktop\new\Strukturinio-programavimo-darbai\AntrojiPraktineUzduotis\cmake-build-debug
+CMAKE_BINARY_DIR = C:\Users\s057739\Documents\Strukturinio-programavimo-darbai\AntrojiPraktineUzduotis\cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/AntrojiPraktineUzduotis.dir/depend.make
@@ -69,18 +69,18 @@ include CMakeFiles/AntrojiPraktineUzduotis.dir/progress.make
 include CMakeFiles/AntrojiPraktineUzduotis.dir/flags.make
 
 CMakeFiles/AntrojiPraktineUzduotis.dir/main.cpp.obj: CMakeFiles/AntrojiPraktineUzduotis.dir/flags.make
-CMakeFiles/AntrojiPraktineUzduotis.dir/main.cpp.obj: C:/Users/PC/Desktop/new/Strukturinio-programavimo-darbai/AntrojiPraktineUzduotis/main.cpp
+CMakeFiles/AntrojiPraktineUzduotis.dir/main.cpp.obj: C:/Users/s057739/Documents/Strukturinio-programavimo-darbai/AntrojiPraktineUzduotis/main.cpp
 CMakeFiles/AntrojiPraktineUzduotis.dir/main.cpp.obj: CMakeFiles/AntrojiPraktineUzduotis.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\PC\Desktop\new\Strukturinio-programavimo-darbai\AntrojiPraktineUzduotis\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/AntrojiPraktineUzduotis.dir/main.cpp.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/AntrojiPraktineUzduotis.dir/main.cpp.obj -MF CMakeFiles\AntrojiPraktineUzduotis.dir\main.cpp.obj.d -o CMakeFiles\AntrojiPraktineUzduotis.dir\main.cpp.obj -c C:\Users\PC\Desktop\new\Strukturinio-programavimo-darbai\AntrojiPraktineUzduotis\main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\s057739\Documents\Strukturinio-programavimo-darbai\AntrojiPraktineUzduotis\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/AntrojiPraktineUzduotis.dir/main.cpp.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/AntrojiPraktineUzduotis.dir/main.cpp.obj -MF CMakeFiles\AntrojiPraktineUzduotis.dir\main.cpp.obj.d -o CMakeFiles\AntrojiPraktineUzduotis.dir\main.cpp.obj -c C:\Users\s057739\Documents\Strukturinio-programavimo-darbai\AntrojiPraktineUzduotis\main.cpp
 
 CMakeFiles/AntrojiPraktineUzduotis.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/AntrojiPraktineUzduotis.dir/main.cpp.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\PC\Desktop\new\Strukturinio-programavimo-darbai\AntrojiPraktineUzduotis\main.cpp > CMakeFiles\AntrojiPraktineUzduotis.dir\main.cpp.i
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\s057739\Documents\Strukturinio-programavimo-darbai\AntrojiPraktineUzduotis\main.cpp > CMakeFiles\AntrojiPraktineUzduotis.dir\main.cpp.i
 
 CMakeFiles/AntrojiPraktineUzduotis.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/AntrojiPraktineUzduotis.dir/main.cpp.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\PC\Desktop\new\Strukturinio-programavimo-darbai\AntrojiPraktineUzduotis\main.cpp -o CMakeFiles\AntrojiPraktineUzduotis.dir\main.cpp.s
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\s057739\Documents\Strukturinio-programavimo-darbai\AntrojiPraktineUzduotis\main.cpp -o CMakeFiles\AntrojiPraktineUzduotis.dir\main.cpp.s
 
 # Object files for target AntrojiPraktineUzduotis
 AntrojiPraktineUzduotis_OBJECTS = \
@@ -94,7 +94,7 @@ AntrojiPraktineUzduotis.exe: CMakeFiles/AntrojiPraktineUzduotis.dir/build.make
 AntrojiPraktineUzduotis.exe: CMakeFiles/AntrojiPraktineUzduotis.dir/linkLibs.rsp
 AntrojiPraktineUzduotis.exe: CMakeFiles/AntrojiPraktineUzduotis.dir/objects1.rsp
 AntrojiPraktineUzduotis.exe: CMakeFiles/AntrojiPraktineUzduotis.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\PC\Desktop\new\Strukturinio-programavimo-darbai\AntrojiPraktineUzduotis\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable AntrojiPraktineUzduotis.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\s057739\Documents\Strukturinio-programavimo-darbai\AntrojiPraktineUzduotis\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable AntrojiPraktineUzduotis.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\AntrojiPraktineUzduotis.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -106,6 +106,6 @@ CMakeFiles/AntrojiPraktineUzduotis.dir/clean:
 .PHONY : CMakeFiles/AntrojiPraktineUzduotis.dir/clean
 
 CMakeFiles/AntrojiPraktineUzduotis.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\PC\Desktop\new\Strukturinio-programavimo-darbai\AntrojiPraktineUzduotis C:\Users\PC\Desktop\new\Strukturinio-programavimo-darbai\AntrojiPraktineUzduotis C:\Users\PC\Desktop\new\Strukturinio-programavimo-darbai\AntrojiPraktineUzduotis\cmake-build-debug C:\Users\PC\Desktop\new\Strukturinio-programavimo-darbai\AntrojiPraktineUzduotis\cmake-build-debug C:\Users\PC\Desktop\new\Strukturinio-programavimo-darbai\AntrojiPraktineUzduotis\cmake-build-debug\CMakeFiles\AntrojiPraktineUzduotis.dir\DependInfo.cmake "--color=$(COLOR)"
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\s057739\Documents\Strukturinio-programavimo-darbai\AntrojiPraktineUzduotis C:\Users\s057739\Documents\Strukturinio-programavimo-darbai\AntrojiPraktineUzduotis C:\Users\s057739\Documents\Strukturinio-programavimo-darbai\AntrojiPraktineUzduotis\cmake-build-debug C:\Users\s057739\Documents\Strukturinio-programavimo-darbai\AntrojiPraktineUzduotis\cmake-build-debug C:\Users\s057739\Documents\Strukturinio-programavimo-darbai\AntrojiPraktineUzduotis\cmake-build-debug\CMakeFiles\AntrojiPraktineUzduotis.dir\DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/AntrojiPraktineUzduotis.dir/depend
 

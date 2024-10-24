@@ -1,3 +1,3 @@
-C:/Users/PC/Desktop/new/Strukturinio-programavimo-darbai/AntrojiPraktineUzduotis/cmake-build-debug/CMakeFiles/AntrojiPraktineUzduotis.dir
-C:/Users/PC/Desktop/new/Strukturinio-programavimo-darbai/AntrojiPraktineUzduotis/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/PC/Desktop/new/Strukturinio-programavimo-darbai/AntrojiPraktineUzduotis/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+C:/Users/s057739/Documents/Strukturinio-programavimo-darbai/AntrojiPraktineUzduotis/cmake-build-debug/CMakeFiles/AntrojiPraktineUzduotis.dir
+C:/Users/s057739/Documents/Strukturinio-programavimo-darbai/AntrojiPraktineUzduotis/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/s057739/Documents/Strukturinio-programavimo-darbai/AntrojiPraktineUzduotis/cmake-build-debug/CMakeFiles/rebuild_cache.dir
