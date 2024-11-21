@@ -2,115 +2,106 @@
 #include <string>
 using namespace std;
 
+char ABC[52]{};
 
-const char ABC_LT[] = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'Y', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'R', 'S', 'T', 'U', 'Z', ' '};
-const int ABC_dydis = sizeof(ABC_LT) / sizeof(ABC_LT[0]);
+string input(string message);
 
-
-
-int ABC_indexpaieska(char c) {
-    for (int i = 0; i < ABC_dydis; i++) {
-        if (ABC_LT[i] == c) {
-            return i;
-        }
+void abc() {
+    for (int i = 0; i < 26; i++) {
+        ABC[i] = 'A' + i;
     }
-    return -1;
+    for (int i = 0; i < 26; i++) {
+        ABC[26+i] = 'a' + i;
+    }
 }
 
-string ABC_sifruotas(const string &text, const string &key) {
-    string result = "";
-    for (size_t i = 0; i < text.size(); i++) {
-        int mi = ABC_indexpaieska(text[i]);
-        int ki = ABC_indexpaieska(key[i % key.size()]);
-        if (mi != -1 && ki != -1) {
-            int ci = (mi + ki) % ABC_dydis;
-            result += ABC_LT[ci];
+void ABCsifravimas(string str, string strKey) {
+    int m, k;
+
+    for (int i = 0; i < str.size();i++) {
+        for ( int j = 0; j < 52; j++) {
+            if (str[i] == ABC[j]) {
+                m = j;
+                break;
+            }
         }
-        else {
-            result += text[i];
+        for (int j = 0; j < 52; j++) {
+            if (strKey[i % strKey.size()] == ABC[j]) {
+                k = j;
+                break;
+            }
         }
+        str[i] = ABC[(m+k) % 52];
     }
-    return result;
+    cout << "Jusu uzsifruotas tekstas: " << str << endl;
+
+    for (int i = 0; i < str.size();i++) {
+        for ( int j = 0; j < 52; j++) {
+            if (str[i] == ABC[j]) {
+                m = j;
+                break;
+            }
+        }
+        for (int j = 0; j < 52; j++) {
+            if (strKey[i % strKey.size()] == ABC[j]) {
+                k = j;
+                break;
+            }
+        }
+        str[i] = ABC[(m - k + 52) % 52];
+    }
+    cout << "Jusu desifruotas tekstas: " << str << endl;
 }
 
-string ABC_desifruotas (const string &text, const string &key) {
-    string result = "";
-    for (size_t i = 0; i < text.size(); i++) {
-        int ci = ABC_indexpaieska(text[i]);
-        int ki = ABC_indexpaieska(key[i % key.size()]);
-        if (ci != -1 && ki != -1) {
-            int mi = (ci - ki + ABC_dydis) % ABC_dydis;
-            result += ABC_LT[mi];
-        }
-        else {
-            result += text[i];
-        }
+void ASCIIsifravimas(string str, string strKey) {
+    int m, k , c;
+    for ( int i = 0; i < str.length(); i++) {
+        m = int(str[i]);
+        k = int(strKey[i % strKey.size()]);
+        c = 32 + ((m + k - 2 * 32) % 91);
+        str[i] = char(c);
     }
-    return result;
+    cout << "Uzsifruotas tekstas: " << str << endl;
+    for ( int i = 0; i < str.length(); i++) {
+        m = int(str[i]);
+        k = int(strKey[i % strKey.size()]);
+        c = 32 + ((m - k + 91) % 91);
+        str[i] = char(c);
+    }
+    cout << "Desifruotas tekstas: " << str << endl;
 }
+int main() {
+    abc();
+    int action;
+    string tekstas, raktas;
+    char ciklas = 'y';
 
-string ASCII_sifruotas(const string &text, const string &key) {
-    string result = "";
-    for (size_t i = 0; i < text.size(); i++) {
-        char ci = (text[i] + key[i % key.size()]) % 256;
-        result += ci;
-    }
-    return result;
-}
+    while (ciklas == 'Y' || 'y') {
+        cout << "Pasirinktie sifravimo buda: " << endl;
+        cout << "1. ABC sifravimas." << endl;
+        cout << "2. ASCII koduotes sifravimas." << endl;
+        cout << "3. Uzdaryti programa." << endl;
+        cin >> action;
 
-string ASCII_desifruotas(const string &text, const string &key) {
-    string result = "";
-    for (size_t i = 0; i < text.size(); i++) {
-        char mi = (text[i] + key[i % key.size()] + 256 ) % 256;
-        result += mi;
-    }
-    return result;
-}
+        if (action == 0)
+            break;
+        switch (action) {
+            case 1:
+                cout << "Iveskite teksta: " << endl;
+            cin >> tekstas;
+            cout << "Iveskite rakta: " << endl;
+            cin >> raktas;
+            ABCsifravimas(tekstas, raktas);
+            break;
 
-
-    int main() {
-    int pasirinkimas, veiksmas;
-    string text, key, result;
-
-    cout << "Pasirinkite šifravimo būdą" << endl;
-    cout << "1. Naudojant abėcėlę" << endl;
-    cout << "2. Naudojant ASCII koduotę" << endl;
-    cout << "Jusu pasirinkimas: " << endl;
-    cin >> pasirinkimas;
-    cin.ignore();
-
-    cout << "Pasirinkite, ka norite padaryti su Jusu tekstu" << endl;
-    cout << "1. Uzsifruoti teksta" << endl;
-    cout << "2. Desifruoti teksta" << endl;
-    cin >> veiksmas;
-    cin.ignore();
-
-    cout << "Iveskite Jusu teksta" << endl;
-    getline(cin, text);
-    cout << "Iveskite rakta" << endl;
-    getline(cin, key);
-
-    if (pasirinkimas == 1) {
-        if (veiksmas == 1) {
-            result = ABC_sifruotas(text, key);
-            cout << "Uzsifruotas tekstas: " << result << endl;
-        } else if (veiksmas == 2) {
-            result = ABC_desifruotas(text, key);
-            cout << "Desifruotas tekstas: " << result << endl;
-        } else {
-            cout << "Bandykite dar karta" << endl;
+            case 2:
+                cout << "Iveskite teksta: " << endl;
+            cin >> tekstas;
+            cout << "Iveskite rakta: " << endl;
+            cin >> raktas;
+            ASCIIsifravimas(tekstas, raktas);
+            break;
         }
-    } else if (pasirinkimas == 2) {
-        if (veiksmas == 1) {
-            result = ASCII_sifruotas(text, key);
-            cout << "Uzsifruotas tekstas: " << result << endl;
-        } else if (veiksmas == 2) {
-            result = ASCII_desifruotas(text, key);
-            cout << "Desifruotas tekstas: " << result << endl;
-        } else {
-            cout << "Bandykite dar karta" << endl;
-        }
-    } else { cout << "Neteisingas pasirinkimas" << endl;
     }
-    return 0;
+return 0;
 }
