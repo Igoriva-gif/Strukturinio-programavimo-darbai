@@ -1,0 +1,3 @@
+C:/Users/PC/Desktop/new/Strukturinio-programavimo-darbai/KetvirtaPraktineUzduotis/cmake-build-debug/CMakeFiles/KetvirtaPraktineUzduotis.dir
+C:/Users/PC/Desktop/new/Strukturinio-programavimo-darbai/KetvirtaPraktineUzduotis/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/PC/Desktop/new/Strukturinio-programavimo-darbai/KetvirtaPraktineUzduotis/cmake-build-debug/CMakeFiles/rebuild_cache.dir
