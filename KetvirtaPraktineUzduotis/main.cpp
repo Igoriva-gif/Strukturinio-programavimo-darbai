@@ -13,13 +13,16 @@ struct MenuItemType {
 
 void getData(MenuItemType menuList[]);
 void showMenu(const MenuItemType menuList[]);
-void printCheck(const MenuItemType menuList[], int uzsakymas[][2], int uzsakymoDydis);
+void printCheck(const MenuItemType menuList[], int uzsakymas[][2], int uzsakymoDydis, bool nuolaidaYra);
 
 int main() {
     MenuItemType menuList[meniuDydis];
     int uzsakymas[100][2];
     int uzsakymoDydis = 0;
     int pasirinkimas, kiekis;
+    string nuolaidoskodas;
+    bool nuolaidaYra = false;
+
 
     getData(menuList);
 
@@ -51,7 +54,14 @@ int main() {
         uzsakymoDydis++;
     }
 
-    printCheck(menuList, uzsakymas, uzsakymoDydis);
+    cout << "Iveskite nuolaidos koda ( jeigu turite ): " << endl;
+    cin >> nuolaidoskodas;
+
+    if (nuolaidoskodas == "Kaledos") {
+        nuolaidaYra = true;
+    }
+
+    printCheck(menuList, uzsakymas, uzsakymoDydis, nuolaidaYra);
 
     return 0;
 }
@@ -75,7 +85,7 @@ void showMenu(const MenuItemType menuList[]) {
     }
 }
 
-void printCheck(const MenuItemType menuList[], int uzsakymas[][2], int uzsakymoDydis) {
+void printCheck(const MenuItemType menuList[], int uzsakymas[][2], int uzsakymoDydis, bool nuolaidaYra) {
     double total = 0.0;
 
     ofstream saskaita("saskaita.txt");
@@ -96,6 +106,14 @@ void printCheck(const MenuItemType menuList[], int uzsakymas[][2], int uzsakymoD
         saskaita << kiekis << " " << menuList[index].menuItem << " " << fixed << setprecision(2) << kaina << "EUR" << endl;;
 
         total += kaina;
+    }
+
+    if (nuolaidaYra) {
+        double nuolaida = total * 0.10;
+        total -= nuolaida;
+
+        cout << "10% nuolaida su kodu \"Kaledos\" " << fixed << setprecision(2) << nuolaida << "EUR" << endl;
+        saskaita << "10% nuolaida su kodu \"Kaledos\" " << fixed << setprecision(2) << nuolaida << "EUR" << endl;
     }
 
     double mokesciai = total * 0.21;
