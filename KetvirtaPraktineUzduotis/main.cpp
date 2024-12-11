@@ -74,3 +74,40 @@ void showMenu(const MenuItemType menuList[]) {
         cout << i + 1 << ". " << menuList[i].menuItem << " - " << fixed << setprecision(2) << menuList[i].menuPrice << " EUR" << endl;
     }
 }
+
+void printCheck(const MenuItemType menuList[], int uzsakymas[][2], int uzsakymoDydis) {
+    double total = 0.0;
+
+    ofstream saskaita("saskaita.txt");
+    if (!saskaita) {
+        cerr << "Nepavyko sukurti saskaita" << endl;
+        return;
+    }
+
+    cout << "Jusu saskaita: " << endl;
+    saskaita << "Jusu saskaita: " << endl;
+
+    for (int i = 0; i < uzsakymoDydis; ++i) {
+        int index = uzsakymas[i][0];
+        int kiekis = uzsakymas[i][1];
+        double kaina = menuList[index].menuPrice * kiekis;
+
+        cout << kiekis << " " << menuList[index].menuItem << " " << fixed << setprecision(2) << kaina << "EUR" << endl;
+        saskaita << kiekis << " " << menuList[index].menuItem << " " << fixed << setprecision(2) << kaina << "EUR" << endl;;
+
+        total += kaina;
+    }
+
+    double mokesciai = total * 0.21;
+    double galutinekaina = total + mokesciai;
+
+    cout << "Mokesciai: " << fixed << setprecision(2) << mokesciai << "EUR" << endl;
+    cout << "Is viso moketi: " << fixed << setprecision(2) << galutinekaina << "EUR" << endl;
+
+    saskaita << "Mokesciai: "<< fixed << setprecision(2) << mokesciai << "EUR" << endl;
+    saskaita << "Is viso moketi: " << fixed << setprecision(2) << galutinekaina << "EUR" << endl;
+
+    saskaita.close();
+
+    cout << "Jusu saskaita issaugota. 'saskaita.txt'." << endl;
+}
