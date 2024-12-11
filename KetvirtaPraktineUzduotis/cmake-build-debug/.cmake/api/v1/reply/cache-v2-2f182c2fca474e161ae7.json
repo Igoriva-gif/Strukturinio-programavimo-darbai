@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "c:/Users/PC/Desktop/new/Strukturinio-programavimo-darbai/KetvirtaPraktineUzduotis/cmake-build-debug"
+			"value" : "c:/Users/PC/Desktop/strukturinis/Strukturinio-programavimo-darbai/KetvirtaPraktineUzduotis/cmake-build-debug"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -575,7 +575,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/PC/Desktop/new/Strukturinio-programavimo-darbai/KetvirtaPraktineUzduotis/cmake-build-debug/CMakeFiles/pkgRedirects"
+			"value" : "C:/Users/PC/Desktop/strukturinis/Strukturinio-programavimo-darbai/KetvirtaPraktineUzduotis/cmake-build-debug/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -647,7 +647,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "C:/Users/PC/Desktop/new/Strukturinio-programavimo-darbai/KetvirtaPraktineUzduotis"
+			"value" : "C:/Users/PC/Desktop/strukturinis/Strukturinio-programavimo-darbai/KetvirtaPraktineUzduotis"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -1279,7 +1279,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/PC/Desktop/new/Strukturinio-programavimo-darbai/KetvirtaPraktineUzduotis/cmake-build-debug"
+			"value" : "C:/Users/PC/Desktop/strukturinis/Strukturinio-programavimo-darbai/KetvirtaPraktineUzduotis/cmake-build-debug"
 		},
 		{
 			"name" : "KetvirtaPraktineUzduotis_IS_TOP_LEVEL",
@@ -1303,7 +1303,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/PC/Desktop/new/Strukturinio-programavimo-darbai/KetvirtaPraktineUzduotis"
+			"value" : "C:/Users/PC/Desktop/strukturinis/Strukturinio-programavimo-darbai/KetvirtaPraktineUzduotis"
 		},
 		{
 			"name" : "_CMAKE_LINKER_PUSHPOP_STATE_SUPPORTED",

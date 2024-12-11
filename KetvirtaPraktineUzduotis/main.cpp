@@ -68,4 +68,9 @@ void getData(MenuItemType menuList[]) {
     menuList[7] = {"Arbata", 0.75};
 }
 
-
+void showMenu(const MenuItemType menuList[]) {
+    cout << "Musu restorano meniu: " << endl;
+    for (int i = 0; i < meniuDydis; ++i) {
+        cout << i + 1 << ". " << menuList[i].menuItem << " - " << fixed << setprecision(2) << menuList[i].menuPrice << " EUR" << endl;
+    }
+}
