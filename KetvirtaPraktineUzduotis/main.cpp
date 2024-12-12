@@ -81,7 +81,7 @@ void getData(MenuItemType menuList[]) {
 void showMenu(const MenuItemType menuList[]) {
     cout << "Musu restorano meniu: " << endl;
     for (int i = 0; i < meniuDydis; ++i) {
-        cout << i + 1 << ". " << menuList[i].menuItem << " - " << fixed << setprecision(2) << menuList[i].menuPrice << " EUR" << endl;
+        cout << i + 1 << ". " << left << setw(36) << menuList[i].menuItem <<  right << setw(6) << fixed << setprecision(2) << menuList[i].menuPrice << " EUR" << endl;
     }
 }
 
@@ -102,8 +102,8 @@ void printCheck(const MenuItemType menuList[], int uzsakymas[][2], int uzsakymoD
         int kiekis = uzsakymas[i][1];
         double kaina = menuList[index].menuPrice * kiekis;
 
-        cout << kiekis << " " << menuList[index].menuItem << " " << fixed << setprecision(2) << kaina << "EUR" << endl;
-        saskaita << kiekis << " " << menuList[index].menuItem << " " << fixed << setprecision(2) << kaina << "EUR" << endl;;
+         cout << right << setw(2) << kiekis << " " << left << setw(40) << menuList[index].menuItem << right << setw(8) << fixed << setprecision(2) << kaina << "EUR" << endl;
+         saskaita << kiekis << " " << left << setw(35) << menuList[index].menuItem << right << setw(9) << fixed << setprecision(2) << kaina << "EUR" << endl;;
 
         total += kaina;
     }
@@ -112,18 +112,18 @@ void printCheck(const MenuItemType menuList[], int uzsakymas[][2], int uzsakymoD
         double nuolaida = total * 0.10;
         total -= nuolaida;
 
-        cout << "10% nuolaida su kodu \"Kaledos\" " << fixed << setprecision(2) << nuolaida << "EUR" << endl;
-        saskaita << "10% nuolaida su kodu \"Kaledos\" " << fixed << setprecision(2) << nuolaida << "EUR" << endl;
+        cout << left << setw(35) << "10% nuolaida su kodu \"Kaledos\" " << right << setw(16) << fixed << setprecision(2) << nuolaida << "EUR" << endl;
+        saskaita << left << setw(37) << "10% nuolaida su kodu \"Kaledos\" " << right << setw(9 ) << fixed << setprecision(2) << nuolaida << "EUR" << endl;
     }
 
     double mokesciai = total * 0.21;
     double galutinekaina = total + mokesciai;
 
-    cout << "Mokesciai: " << fixed << setprecision(2) << mokesciai << "EUR" << endl;
-    cout << "Is viso moketi: " << fixed << setprecision(2) << galutinekaina << "EUR" << endl;
+    cout << left << setw(35) << "Mokesciai: " << right << setw(16) << fixed << setprecision(2) << mokesciai << "EUR" << endl;
+    cout <<  left << setw(37) << "Is viso moketi: " << right << setw(15) << fixed << setprecision(2) << galutinekaina << "EUR" << endl;
 
-    saskaita << "Mokesciai: "<< fixed << setprecision(2) << mokesciai << "EUR" << endl;
-    saskaita << "Is viso moketi: " << fixed << setprecision(2) << galutinekaina << "EUR" << endl;
+    saskaita << left << setw(35) << "Mokesciai: "<< right << setw(11) << fixed << setprecision(2) << mokesciai << "EUR" << endl;
+    saskaita <<  left << setw(37) << "Is viso moketi: " << right << setw(10) << fixed << setprecision(2) << galutinekaina << "EUR" << endl;
 
     saskaita.close();
 
